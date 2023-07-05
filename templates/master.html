@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/styles.css' %}">
+</head>
+<body>
+
+<a href="{% url 'home-page' %}"><button class="btn btn-info">Home</button></a>
+<a href="{% url 'about-page' %}"><button class="btn btn-primary">About</button></a>
+<a href="{% url 'gallery-page' %}"><button class="btn btn-secondary">Gallery</button></a>
+<a href=""><button class="btn btn-warning">Register</button></a>
+<a href=""><button class="btn btn-danger">Login</button></a>
+<hr>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
